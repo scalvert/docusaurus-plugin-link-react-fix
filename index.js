@@ -5,18 +5,17 @@ module.exports = function (context, options) {
   return {
     name: "link-react-fix",
     configureWebpack(config, isServer, utils) {
-      let parentProjectDir = findUp.sync("docusaurus.config.json", {
+      let docusaurusConfigPath = findUp.sync("docusaurus.config.js", {
         cwd: __dirname,
       });
+
+      let projectDir = path.dirname(docusaurusConfigPath);
 
       return {
         resolve: {
           alias: {
-            react: path.resolve(parentProjectDir, "./node_modules/react"),
-            "react-dom": path.resolve(
-              parentProjectDir,
-              ".node_modules/react-dom",
-            ),
+            react: path.resolve(projectDir, "./node_modules/react"),
+            "react-dom": path.resolve(projectDir, "./node_modules/react-dom"),
           },
         },
       };
