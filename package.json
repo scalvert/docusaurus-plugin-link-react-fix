@@ -19,7 +19,9 @@
     "prettier": "prettier --write ."
   },
   "devDependencies": {
-    "prettier": "^3.2.5"
+    "@release-it-plugins/lerna-changelog": "^5.0.0",
+    "prettier": "^3.2.5",
+    "release-it": "^15.5.0"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -27,5 +29,23 @@
   "volta": {
     "node": "18.20.0",
     "yarn": "3.8.1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "release-it": {
+    "plugins": {
+      "@release-it-plugins/lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
   }
 }
