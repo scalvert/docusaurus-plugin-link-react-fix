@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-plugin-link-react-fix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Docusaurus plugin to fix React link issues",
   "keywords": [
     "docusaurus",
