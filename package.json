@@ -1,0 +1,31 @@
+{
+  "name": "docusaurus-plugin-link-react-fix",
+  "version": "1.0.0",
+  "description": "A Docusaurus plugin to fix React link issues",
+  "keywords": [
+    "docusaurus",
+    "plugin",
+    "react",
+    "link"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/docusaurus-plugin-link-react-fix.git"
+  },
+  "license": "MIT",
+  "author": "Your Name",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "volta": {
+    "node": "18.20.0",
+    "yarn": "3.8.1"
+  }
+}
